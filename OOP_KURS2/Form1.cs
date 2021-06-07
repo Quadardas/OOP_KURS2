@@ -82,6 +82,7 @@ namespace OOP_KURS2
         void UpdateGrid()
         {
             DataGridDoc.Rows.Clear();
+            dataGridView1.Rows.Clear();
             foreach(Doctor doc in DB.doctors)
             {
                 educ = String.Empty;
@@ -95,8 +96,11 @@ namespace OOP_KURS2
                     case "стоматолог-терапевт": 
                 }*/
                 DataGridDoc.Rows.Add(doc.thisName, doc.thisEducation, doc.thisAge, doc.thisStazh, educ);
-
             }
+            /*foreach(Patient pat in DB.patients)
+            {
+                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.SelectedItem.ToString(), )
+            }*/
         }
 
         private void AgeDoc_Scroll(object sender, EventArgs e)

@@ -67,9 +67,11 @@ namespace OOP_KURS2
             {
                 form1.listBox1.Items.Add(b);
             }
-            
+            this.Close();
         }
             public Form1 form1;
+        
+        
       
     }
     

@@ -16,7 +16,7 @@ namespace OOP_KURS2
         }
         public override string display()
         {
-            string text = $"тип терапии {this.therapyType}";
+            string text = $"Тип терапии {this.therapyType}";
             return text;
         }
     }
