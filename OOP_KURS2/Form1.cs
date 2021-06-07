@@ -19,38 +19,111 @@ namespace OOP_KURS2
         }
         private void ServicesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (ServicesCB.Text)
+            switch (ServicesCB.SelectedItem.ToString())
             {
-                case "Лечение десен": TypeCB.Items.Clear(); TypeCB.Enabled = false;  break;
-                case "Лечение Кариеса": TypeCB.Items.Clear(); TypeCB.Enabled = false; break;
-                case "Резекция верхушки корня": TypeCB.Items.Clear(); TypeCB.Enabled = false; break;
-                case "Удаление зуба": TypeCB.Items.Clear(); TypeCB.Enabled = false;  break;
+                case "Лечение дёсен":
+                    {
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach(Doctor d in DB.doctors)
+                        {
+                            foreach(Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        } 
+                        break;
+                    }
+                   
+                case "Лечение Кариеса":
+                    {
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach (Doctor d in DB.doctors)
+                        {
+                            foreach (Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        }
+                        break;
+                    }
+                case "Резекция верхушки корня":
+                    {
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach (Doctor d in DB.doctors)
+                        {
+                            foreach (Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        }
+                        break;
+                    }
+                case "Удаление зуба":
+                    {
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach (Doctor d in DB.doctors)
+                        {
+                            foreach (Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        }
+                        break;
+                    }
                 case "Отбеливание зубов":
-                    TypeCB.Items.Clear();
-                    TypeCB.Enabled = true;
-                    TypeCB.Items.Add("Механический метод");
-                    TypeCB.Items.Add("Фотоотбеливание");
-                    TypeCB.Items.Add("Химическое отбеливание");
-                    TypeCB.Items.Add("Внутриканальное отбеливание");
-                    TypeCB.Items.Add("Лазерное отбеливание");
-                     break;
+                    {
+                        TypeCB.Items.Clear();
+                        TypeCB.Enabled = true;
+                        TypeCB.Items.Add("Механический метод");
+                        TypeCB.Items.Add("Фотоотбеливание");
+                        TypeCB.Items.Add("Химическое отбеливание");
+                        TypeCB.Items.Add("Внутриканальное отбеливание");
+                        TypeCB.Items.Add("Лазерное отбеливание");
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach (Doctor d in DB.doctors)
+                        {
+                            foreach (Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        }
+                        break;
+                    }
                 case "Удаление зубного камня":
-                    TypeCB.Enabled = true;
-                    TypeCB.Items.Clear();
-                    TypeCB.Items.Add("Механическая чистка");
-                    TypeCB.Items.Add("Пескоструйная обработка");
-                    TypeCB.Items.Add("Ультразвуком");
-                    TypeCB.Items.Add("Лазером"); break;
+                    {
+                        TypeCB.Enabled = true;
+                        TypeCB.Items.Clear();
+                        TypeCB.Items.Add("Механическая чистка");
+                        TypeCB.Items.Add("Пескоструйная обработка");
+                        TypeCB.Items.Add("Ультразвуком");
+                        TypeCB.Items.Add("Лазером"); break;
+                        selectDocCB.Items.Clear();
+                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        foreach (Doctor d in DB.doctors)
+                        {
+                            foreach (Services s in d.thisService)
+                            {
+                                if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
+                            }
+                        }
+                    }
             }
         }
+
+        
         private void AddPat()
         {
             Patient patient = new Patient(ServicesCB.Text, PatPassTB.Text, NamePatTB.Text, numericUpDown1.Value.ToString());
             DB.patients.Add(patient);
             switch (ServicesCB.Text)
             {
-                case "Лечение десен": patient.setThisService = new Lech_Des("Лечение десен", 3000, "Лечение десен"); break;
-                case "Лечение кариеса": patient.setThisService = new Lech_Kar("Лечение кариеса", 3000, "Лечение кариеса"); break;
+                case "Лечение десен": patient.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); break;
+                case "Лечение Кариеса": patient.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
                 case "Резекция верхушки корня": patient.setThisService = new Rezec("Резекция верхушки корня", 1500, "Резекция"); break;
                 case "Удаление зуба": patient.setThisService = new UdalZuba("Удаление зуба", 800, "Удаление зуба"); break;
                 case "Отбеливание зубов": patient.setThisService = new Otbel(TypeCB.Text, "Отбеливание зубов", "Отбеливание зубов", 9000); break;
@@ -60,6 +133,8 @@ namespace OOP_KURS2
         private void AddPatBTN_Click(object sender, EventArgs e)
         {
             AddPat();
+            UpdateGrid();
+            listBox1.Items.Clear();
         }
         public void AddDoc()
         {
@@ -67,7 +142,7 @@ namespace OOP_KURS2
             DB.doctors.Add(doctor);
             switch (EducCB.Text)
             {
-                case "стоматолог-терапевт": doctor.setThisService = new Lech_Des("Лечение десен", 3000, "Лечение десен"); doctor.setThisService = new Lech_Kar("Лечение кариеса", 3000, "Лечение кариеса"); break;
+                case "стоматолог-терапевт": doctor.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); doctor.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
                 case "Стоматолог-хирург": doctor.setThisService = new Rezec("Резекция верхушки корня", 1500, "Резекция"); doctor.setThisService = new UdalZuba("Удаление зуба", 800, "Удаление зуба"); break;
                 case "стоматолог-гигиенист": doctor.setThisService = new Otbel("Механический метод, Фотоотбеливание, Химическое отбеливание, Внутриканальное отбеливание, Лазерное отбеливание", "Отбеливание зубов", "Отбеливание зубов", 9000); doctor.setThisService = new ZubCumIn("Механическая чистка, Пескоструйная обработка, Ультразвуком, Лазером", "Удаление зубного камня", "Удаление зубного камня", 200); break;
             }
@@ -78,12 +153,13 @@ namespace OOP_KURS2
             AddDoc();
         }
         string educ;
-       
+        string jija;
         void UpdateGrid()
         {
             DataGridDoc.Rows.Clear();
             dataGridView1.Rows.Clear();
-            foreach(Doctor doc in DB.doctors)
+            jija = String.Empty;
+            foreach (Doctor doc in DB.doctors)
             {
                 educ = String.Empty;
 
@@ -97,10 +173,15 @@ namespace OOP_KURS2
                 }*/
                 DataGridDoc.Rows.Add(doc.thisName, doc.thisEducation, doc.thisAge, doc.thisStazh, educ);
             }
-            /*foreach(Patient pat in DB.patients)
+            foreach(var i in listBox1.Items)
+            { 
+                jija += i + ",";
+               
+            }
+            foreach(Patient pat in DB.patients)
             {
-                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.SelectedItem.ToString(), )
-            }*/
+                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.Text, jija, selectDocCB.SelectedItem.ToString());
+            }
         }
 
         private void AgeDoc_Scroll(object sender, EventArgs e)

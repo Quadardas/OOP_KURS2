@@ -31,6 +31,7 @@ namespace OOP_KURS2
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.selectDocCB = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.TypeCB = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -40,6 +41,12 @@ namespace OOP_KURS2
             this.NamePatTB = new System.Windows.Forms.TextBox();
             this.ServicesCB = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,22 +61,16 @@ namespace OOP_KURS2
             this.AgeDoc = new System.Windows.Forms.TrackBar();
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectDocCB = new System.Windows.Forms.ComboBox();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StazhDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeDoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -101,6 +102,14 @@ namespace OOP_KURS2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // selectDocCB
+            // 
+            this.selectDocCB.FormattingEnabled = true;
+            this.selectDocCB.Location = new System.Drawing.Point(266, 6);
+            this.selectDocCB.Name = "selectDocCB";
+            this.selectDocCB.Size = new System.Drawing.Size(121, 21);
+            this.selectDocCB.TabIndex = 8;
             // 
             // listBox1
             // 
@@ -187,6 +196,46 @@ namespace OOP_KURS2
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column6,
+            this.Column10,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column11});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(744, 191);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Имя пациента";
+            this.Column6.Name = "Column6";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Вид услуги";
+            this.Column10.Name = "Column10";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Тип услуги";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Что лечить";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Врач";
+            this.Column9.Name = "Column9";
             // 
             // tabPage3
             // 
@@ -314,52 +363,10 @@ namespace OOP_KURS2
             this.NameDocTB.Size = new System.Drawing.Size(121, 20);
             this.NameDocTB.TabIndex = 0;
             // 
-            // dataGridView1
+            // Column11
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column10,
-            this.Column7,
-            this.Column8,
-            this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 191);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Имя пациента";
-            this.Column6.Name = "Column6";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Вид услуги";
-            this.Column10.Name = "Column10";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Тип услуги";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Что лечить";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Врач";
-            this.Column9.Name = "Column9";
-            // 
-            // selectDocCB
-            // 
-            this.selectDocCB.FormattingEnabled = true;
-            this.selectDocCB.Location = new System.Drawing.Point(266, 6);
-            this.selectDocCB.Name = "selectDocCB";
-            this.selectDocCB.Size = new System.Drawing.Size(121, 21);
-            this.selectDocCB.TabIndex = 8;
+            this.Column11.HeaderText = "Стоимость";
+            this.Column11.Name = "Column11";
             // 
             // Form1
             // 
@@ -374,12 +381,12 @@ namespace OOP_KURS2
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StazhDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeDoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,6 +425,7 @@ namespace OOP_KURS2
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.ComboBox selectDocCB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
 

@@ -10,6 +10,7 @@ namespace OOP_KURS2
     {
         public static List<Doctor> doctors = new List<Doctor>();
         public static List<Patient> patients = new List<Patient>();
+        public static List<Services> services = new List<Services>();
         
     }
 }
