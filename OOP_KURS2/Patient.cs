@@ -8,14 +8,22 @@ namespace OOP_KURS2
 {
     public class Patient : Human
     {
-        string Diagnoz, Pass; // pass это паспорт
+        string Diagnoz, Pass, toHeal; // pass это паспорт
         List<Services> RequestedServices = new List<Services>();
 
-        public Patient(string Diagnoz,string Pass, string name, string age) : base(age, name)
+        public Patient(string toHeal, string Diagnoz,string Pass, string name, string age) : base(age, name)
         {
             this.Diagnoz = Diagnoz;
             this.Pass = Pass;
+            this.toHeal = toHeal;
         }
+
+        public string thisToHeal
+        {
+            get { return this.toHeal; }
+            set { this.toHeal = value is string ? value : null; }
+        }
+
         public string thisDiagnoz
         {
             get { return this.Diagnoz; }

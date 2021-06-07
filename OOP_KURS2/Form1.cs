@@ -118,7 +118,12 @@ namespace OOP_KURS2
         
         private void AddPat()
         {
-            Patient patient = new Patient(ServicesCB.Text, PatPassTB.Text, NamePatTB.Text, numericUpDown1.Value.ToString());
+            string Temp = string.Empty;
+            foreach(string i in listBox1.Items)
+            {
+                Temp += $"{i}, ";
+            }
+            Patient patient = new Patient(Temp, ServicesCB.Text, PatPassTB.Text, NamePatTB.Text, numericUpDown1.Value.ToString());
             DB.patients.Add(patient);
             switch (ServicesCB.Text)
             {
@@ -176,11 +181,10 @@ namespace OOP_KURS2
             foreach(var i in listBox1.Items)
             { 
                 jija += i + ",";
-               
             }
             foreach(Patient pat in DB.patients)
             {
-                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.Text, jija, selectDocCB.SelectedItem.ToString());
+                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.Text, pat.thisToHeal, selectDocCB.SelectedItem.ToString(), pat.thisService[0].thisPrice);
             }
         }
 
