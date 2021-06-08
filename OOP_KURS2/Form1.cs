@@ -101,7 +101,7 @@ namespace OOP_KURS2
                         TypeCB.Items.Add("Механическая чистка");
                         TypeCB.Items.Add("Пескоструйная обработка");
                         TypeCB.Items.Add("Ультразвуком");
-                        TypeCB.Items.Add("Лазером"); break;
+                        TypeCB.Items.Add("Лазером"); 
                         selectDocCB.Items.Clear();
                         TypeCB.Items.Clear(); TypeCB.Enabled = false;
                         foreach (Doctor d in DB.doctors)
@@ -110,11 +110,59 @@ namespace OOP_KURS2
                             {
                                 if (ServicesCB.SelectedItem.ToString() == s.thisServicesName) selectDocCB.Items.Add(d.thisName);
                             }
-                        }
+                        }break;
                     }
             }
         }
 
+        void CheckData()
+        {
+            switch (tabControl1.SelectedTab.Text)
+            {
+                case "Добавить Врача":
+                    {
+                        if (NameDocTB.Text == string.Empty || EducCB.Text == string.Empty)
+                        {
+                            errorProvider1.SetError(button1, "Вы ввели неверные данные, проверьте и попробуйте еще раз");
+                        }
+                        else { AddDoc(); errorProvider1.Clear(); }
+                        break;
+                    }
+                case "Запись Пациента":
+                    {
+                        if(ServicesCB.Text == string.Empty  || selectDocCB.Text == string.Empty || NamePatTB.Text == string.Empty || PatPassTB.Text == string.Empty || numericUpDown1.Value == 0 || listBox1.Items.Count == 0)
+                        {
+                            errorProvider1.SetError(AddPatBTN, "Вы ввели неверные данные, проверьте и попробуйте еще раз");
+                        }
+                        else { AddPat(); errorProvider1.Clear(); }
+                        break;
+                    }
+            }
+            
+        }
+        void ClearCB()
+        {
+            switch (tabControl1.SelectedTab.Text)
+            {
+                case "Запись Пациента":
+                    {
+                        ServicesCB.Text = String.Empty;
+                        selectDocCB.Text = String.Empty;
+                        NamePatTB.Text = String.Empty;
+                        PatPassTB.Text = String.Empty;
+                        numericUpDown1.Value = 0;
+                        break;
+                    }
+                case "Добавить Врача":
+                    {
+                        NameDocTB.Text = String.Empty;
+                        EducCB.Text = String.Empty;
+                        AgeDoc.Value = 23;
+                        StazhDoc.Value = 3;
+                        break;
+                    }
+            }
+        }
         
         private void AddPat()
         {
@@ -137,9 +185,10 @@ namespace OOP_KURS2
         }
         private void AddPatBTN_Click(object sender, EventArgs e)
         {
-            AddPat();
+            CheckData();
             UpdateGrid();
             listBox1.Items.Clear();
+            ClearCB();
         }
         public void AddDoc()
         {
@@ -155,7 +204,9 @@ namespace OOP_KURS2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AddDoc();
+            CheckData();
+            ClearCB();
+           // AddDoc();
         }
         string educ;
         string jija;
@@ -177,10 +228,6 @@ namespace OOP_KURS2
                     case "стоматолог-терапевт": 
                 }*/
                 DataGridDoc.Rows.Add(doc.thisName, doc.thisEducation, doc.thisAge, doc.thisStazh, educ);
-            }
-            foreach(var i in listBox1.Items)
-            { 
-                jija += i + ",";
             }
             foreach(Patient pat in DB.patients)
             {
