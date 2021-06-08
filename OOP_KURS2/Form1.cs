@@ -130,7 +130,7 @@ namespace OOP_KURS2
                     }
                 case "Запись Пациента":
                     {
-                        if(ServicesCB.Text == string.Empty  || selectDocCB.Text == string.Empty || NamePatTB.Text == string.Empty || PatPassTB.Text == string.Empty || numericUpDown1.Value == 0 || listBox1.Items.Count == 0)
+                        if(ServicesCB.Text == string.Empty  || selectDocCB.Text == string.Empty || NamePatTB.Text == string.Empty || PatPassTB.Text == string.Empty || numericUpDown1.Value == 0)
                         {
                             errorProvider1.SetError(AddPatBTN, "Вы ввели неверные данные, проверьте и попробуйте еще раз");
                         }
@@ -175,7 +175,7 @@ namespace OOP_KURS2
             DB.patients.Add(patient);
             switch (ServicesCB.Text)
             {
-                case "Лечение десен": patient.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); break;
+                case "Лечение дёсен": patient.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); break;
                 case "Лечение Кариеса": patient.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
                 case "Резекция верхушки корня": patient.setThisService = new Rezec("Резекция верхушки корня", 1500, "Резекция"); break;
                 case "Удаление зуба": patient.setThisService = new UdalZuba("Удаление зуба", 800, "Удаление зуба"); break;
