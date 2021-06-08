@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_KURS2
 {
+    [Serializable]
     public class Lech_Des : Therapy
     {
         List<string> DESNs = new List<string>();

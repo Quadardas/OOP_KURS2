@@ -56,6 +56,9 @@ namespace OOP_KURS2
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,11 +73,10 @@ namespace OOP_KURS2
             this.AgeDoc = new System.Windows.Forms.TrackBar();
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.eventLog1 = new System.Diagnostics.EventLog();
+            this.SaveBTN = new System.Windows.Forms.Button();
+            this.LoadBTN = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -101,6 +103,8 @@ namespace OOP_KURS2
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.LoadBTN);
+            this.tabPage1.Controls.Add(this.SaveBTN);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label9);
@@ -341,6 +345,33 @@ namespace OOP_KURS2
             this.tabPage3.Text = "Добавить Врача";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(287, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Врачебный стаж";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(170, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Возраст врача";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 45);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Специальность врача";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -459,33 +490,6 @@ namespace OOP_KURS2
             this.NameDocTB.Size = new System.Drawing.Size(121, 20);
             this.NameDocTB.TabIndex = 0;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Специальность врача";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(170, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Возраст врача";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(287, 6);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Врачебный стаж";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -494,12 +498,33 @@ namespace OOP_KURS2
             // 
             this.eventLog1.SynchronizingObject = this;
             // 
+            // SaveBTN
+            // 
+            this.SaveBTN.Location = new System.Drawing.Point(494, 344);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(75, 23);
+            this.SaveBTN.TabIndex = 10;
+            this.SaveBTN.Text = "Сохранить";
+            this.SaveBTN.UseVisualStyleBackColor = true;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
+            // 
+            // LoadBTN
+            // 
+            this.LoadBTN.Location = new System.Drawing.Point(575, 344);
+            this.LoadBTN.Name = "LoadBTN";
+            this.LoadBTN.Size = new System.Drawing.Size(75, 23);
+            this.LoadBTN.TabIndex = 11;
+            this.LoadBTN.Text = "Загрузить";
+            this.LoadBTN.UseVisualStyleBackColor = true;
+            this.LoadBTN.Click += new System.EventHandler(this.LoadBTN_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 407);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
@@ -566,6 +591,8 @@ namespace OOP_KURS2
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Diagnostics.EventLog eventLog1;
+        private System.Windows.Forms.Button LoadBTN;
+        private System.Windows.Forms.Button SaveBTN;
     }
 }
 

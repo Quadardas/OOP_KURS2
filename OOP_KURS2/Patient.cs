@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_KURS2
 {
+    [Serializable]
     public class Patient : Human
     {
         string Diagnoz, Pass, toHeal; // pass это паспорт

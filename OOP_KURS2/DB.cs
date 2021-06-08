@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_KURS2
 {
+    [Serializable]
     public static class DB
     {
         public static List<Doctor> doctors = new List<Doctor>();

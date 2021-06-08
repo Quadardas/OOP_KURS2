@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_KURS2
 {
+    [Serializable]
     public class Rezec : Surgery
     {
         List<int> ZUBs = new List<int>();

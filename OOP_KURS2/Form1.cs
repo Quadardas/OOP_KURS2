@@ -264,5 +264,18 @@ namespace OOP_KURS2
             }
 
         }
+
+        private void SaveBTN_Click(object sender, EventArgs e)
+        {
+            Serialize serialize = new Serialize();
+            serialize.Save();
+        }
+
+        private void LoadBTN_Click(object sender, EventArgs e)
+        {
+            Serialize serialize = new Serialize();
+            serialize.Load();
+            UpdateGrid();
+        }
     }
 }
