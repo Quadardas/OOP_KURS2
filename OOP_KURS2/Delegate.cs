@@ -30,14 +30,14 @@ namespace OOP_KURS2
             }
         }
 
-        string avava;
+        string Out;
 
         Display display;
 
-        public void OnPlanetAdded()
+        public void Added()
         {
 
-            avava = ("Врач добавлен (демонстрация делегатов)");
+            Out = ("Врач добавлен (демонстрация делегатов)");
         }
         public string Displayed(Object obj)
         {
@@ -45,12 +45,12 @@ namespace OOP_KURS2
             switch (ava)
             {
                 case "OOP_KURS2.Doctor":
-                    display += OnPlanetAdded;
+                    display += Added;
                     break;
 
             }
             display();
-            return avava;
+            return Out;
         }
     }
 }

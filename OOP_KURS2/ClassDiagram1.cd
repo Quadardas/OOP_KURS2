@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_KURS2.Cosmetic" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cosmetic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Doctor" Collapsed="true">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAhAAAAAAAAAgAAEAAAAAAACgAAAAAAA=</HashCode>
+      <FileName>Doctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Human" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAGAAAAQAAAEAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Human.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Lech_Des" Collapsed="true">
+    <Position X="15.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lech_Des.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Lech_Kar" Collapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Lech_Kar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Otbel" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Otbel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Patient" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJQQAAJAAAAAAAACABAEFQAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Rezec" Collapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Rezec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Services" Collapsed="true">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAACAABAAAAAAAAEEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Surgery" Collapsed="true">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Surgery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.Therapy" Collapsed="true">
+    <Position X="14.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Therapy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.UdalZuba" Collapsed="true">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>UdalZuba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_KURS2.ZubCumIn" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ZubCumIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
