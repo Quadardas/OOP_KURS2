@@ -32,6 +32,7 @@ namespace OOP_KURS2
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.LoadBTN = new System.Windows.Forms.Button();
             this.SaveBTN = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,7 +77,8 @@ namespace OOP_KURS2
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.buttonDel = new System.Windows.Forms.Button();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -127,6 +129,14 @@ namespace OOP_KURS2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Запись Пациента";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(3, 300);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(259, 69);
+            this.listBox2.TabIndex = 12;
             // 
             // LoadBTN
             // 
@@ -288,6 +298,7 @@ namespace OOP_KURS2
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.buttonDel);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -307,7 +318,8 @@ namespace OOP_KURS2
             this.Column7,
             this.Column8,
             this.Column9,
-            this.Column11});
+            this.Column11,
+            this.Column12});
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(644, 191);
@@ -514,13 +526,20 @@ namespace OOP_KURS2
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // listBox2
+            // buttonDel
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(3, 300);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(259, 69);
-            this.listBox2.TabIndex = 12;
+            this.buttonDel.Location = new System.Drawing.Point(575, 344);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.TabIndex = 1;
+            this.buttonDel.Text = "buttonDel";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Index";
+            this.Column12.Name = "Column12";
             // 
             // Form1
             // 
@@ -596,6 +615,8 @@ namespace OOP_KURS2
         private System.Windows.Forms.Button LoadBTN;
         private System.Windows.Forms.Button SaveBTN;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }
 

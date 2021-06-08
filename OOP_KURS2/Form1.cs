@@ -215,6 +215,8 @@ namespace OOP_KURS2
         }
         string educ;
         string jija;
+        int index = 0;
+
         void UpdateGrid()
         {
             DataGridDoc.Rows.Clear();
@@ -236,7 +238,8 @@ namespace OOP_KURS2
             }
             foreach(Patient pat in DB.patients)
             {
-                dataGridView1.Rows.Add(pat.thisName, pat.thisService[0].thisServicesName, pat.thisType, pat.thisToHeal, pat.thisDoc, pat.thisService[0].thisPrice);
+                dataGridView1.Rows.Add(pat.thisName, pat.thisService[0].thisServicesName, pat.thisType, pat.thisToHeal, pat.thisDoc, pat.thisService[0].thisPrice, index);
+                index++;
             }
         }
 
@@ -285,6 +288,13 @@ namespace OOP_KURS2
         private void Disp()
         {
            
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            DB.patients.RemoveAt(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[6].Value));
+            index = 0;
+            UpdateGrid();
         }
     }
 }
