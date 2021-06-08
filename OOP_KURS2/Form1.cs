@@ -197,6 +197,7 @@ namespace OOP_KURS2
             Doctor doctor1 = doctor as Doctor;
             Delegate newdelegate = new Delegate();
             newdelegate.Displayed(doctor);
+            newdelegate.Dispose();
             switch (EducCB.Text)
             {
                 case "стоматолог-терапевт": doctor1.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); doctor1.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
