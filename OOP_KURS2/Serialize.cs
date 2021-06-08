@@ -35,7 +35,7 @@ namespace OOP_KURS2
 
             public void Save()
             {
-                using (FileStream fileStream = new FileStream("File.baka", FileMode.OpenOrCreate))
+                using (FileStream fileStream = new FileStream("File.aboba", FileMode.OpenOrCreate))
                 {
                     binaryFormatter.Serialize(fileStream, CaptureBlock(new Block()));
                 }
@@ -44,7 +44,7 @@ namespace OOP_KURS2
             Block GetDeserializedBlock()
             {
                 Block DeserializeBlock;
-                using (FileStream fileStream = new FileStream("File.baka", FileMode.OpenOrCreate))
+                using (FileStream fileStream = new FileStream("File.aboba", FileMode.OpenOrCreate))
                 {
                     DeserializeBlock = binaryFormatter.Deserialize(fileStream) as Block;
                 }

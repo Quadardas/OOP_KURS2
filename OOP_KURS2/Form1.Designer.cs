@@ -32,7 +32,6 @@ namespace OOP_KURS2
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.LoadBTN = new System.Windows.Forms.Button();
             this.SaveBTN = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@ namespace OOP_KURS2
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -104,7 +104,6 @@ namespace OOP_KURS2
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.LoadBTN);
             this.tabPage1.Controls.Add(this.SaveBTN);
             this.tabPage1.Controls.Add(this.label6);
@@ -129,14 +128,6 @@ namespace OOP_KURS2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Запись Пациента";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(3, 300);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(259, 69);
-            this.listBox2.TabIndex = 12;
             // 
             // LoadBTN
             // 
@@ -372,6 +363,7 @@ namespace OOP_KURS2
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.listBox2);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.label11);
@@ -541,6 +533,14 @@ namespace OOP_KURS2
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(413, 6);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(237, 69);
+            this.listBox2.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,9 +614,9 @@ namespace OOP_KURS2
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button LoadBTN;
         private System.Windows.Forms.Button SaveBTN;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 
