@@ -84,7 +84,7 @@ namespace OOP_KURS2
                         TypeCB.Items.Add("Внутриканальное отбеливание");
                         TypeCB.Items.Add("Лазерное отбеливание");
                         selectDocCB.Items.Clear();
-                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        // TypeCB.Items.Clear(); // TypeCB.Enabled = false;
                         foreach (Doctor d in DB.doctors)
                         {
                             foreach (Services s in d.thisService)
@@ -103,7 +103,7 @@ namespace OOP_KURS2
                         TypeCB.Items.Add("Ультразвуком");
                         TypeCB.Items.Add("Лазером"); 
                         selectDocCB.Items.Clear();
-                        TypeCB.Items.Clear(); TypeCB.Enabled = false;
+                        // TypeCB.Items.Clear(); TypeCB.Enabled = false;
                         foreach (Doctor d in DB.doctors)
                         {
                             foreach (Services s in d.thisService)
@@ -171,7 +171,7 @@ namespace OOP_KURS2
             {
                 Temp += $"{i}, ";
             }
-            Patient patient = new Patient(Temp, ServicesCB.Text, PatPassTB.Text, NamePatTB.Text, numericUpDown1.Value.ToString());
+            Patient patient = new Patient(Temp, ServicesCB.Text, PatPassTB.Text, NamePatTB.Text, numericUpDown1.Value.ToString(), TypeCB.Text, selectDocCB.Text);
             DB.patients.Add(patient);
             switch (ServicesCB.Text)
             {
@@ -231,7 +231,7 @@ namespace OOP_KURS2
             }
             foreach(Patient pat in DB.patients)
             {
-                dataGridView1.Rows.Add(pat.thisName, ServicesCB.SelectedItem.ToString(), TypeCB.Text, pat.thisToHeal, selectDocCB.SelectedItem.ToString(), pat.thisService[0].thisPrice);
+                dataGridView1.Rows.Add(pat.thisName, pat.thisService[0].thisServicesName, pat.thisType, pat.thisToHeal, pat.thisDoc, pat.thisService[0].thisPrice);
             }
         }
 
