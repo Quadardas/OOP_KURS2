@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OOP_KURS2
 {
     [Serializable]
-    public class Otbel : Cosmetic
+    public sealed class Otbel : Cosmetic
     {
         string OtbelType;
         public Otbel(string otbelType, string cosmeticType, string name, int price) : base(cosmeticType, name, price)

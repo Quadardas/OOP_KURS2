@@ -51,6 +51,7 @@ namespace OOP_KURS2
             this.NamePatTB = new System.Windows.Forms.TextBox();
             this.ServicesCB = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonDel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +59,7 @@ namespace OOP_KURS2
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@ namespace OOP_KURS2
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.buttonDel = new System.Windows.Forms.Button();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -308,6 +308,16 @@ namespace OOP_KURS2
             this.tabPage2.Text = "Сведения";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // buttonDel
+            // 
+            this.buttonDel.Location = new System.Drawing.Point(575, 344);
+            this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDel.TabIndex = 1;
+            this.buttonDel.Text = "Удалить запись";
+            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -354,6 +364,11 @@ namespace OOP_KURS2
             // 
             this.Column11.HeaderText = "Стоимость";
             this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Index";
+            this.Column12.Name = "Column12";
             // 
             // tabPage3
             // 
@@ -525,21 +540,6 @@ namespace OOP_KURS2
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.Location = new System.Drawing.Point(575, 344);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(75, 23);
-            this.buttonDel.TabIndex = 1;
-            this.buttonDel.Text = "buttonDel";
-            this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Index";
-            this.Column12.Name = "Column12";
             // 
             // Form1
             // 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OOP_KURS2
 {
     [Serializable]
-    public class ZubCumIn : Cosmetic
+    public sealed class ZubCumIn : Cosmetic
     {
         string UdalType;
         public ZubCumIn(string UdalType, string cosmeticType, string name, int price) : base(cosmeticType, name, price)

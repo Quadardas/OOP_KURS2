@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace OOP_KURS2
 {
     [Serializable]
-    public class UdalZuba : Surgery
+    public sealed class UdalZuba : Surgery
     {
         List<int> ZUBs = new List<int>();
 
