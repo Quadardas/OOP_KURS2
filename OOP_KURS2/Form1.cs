@@ -192,14 +192,19 @@ namespace OOP_KURS2
         }
         public void AddDoc()
         {
-            Doctor doctor = new Doctor(StazhDoc.Value.ToString(), EducCB.Text, NameDocTB.Text, AgeDoc.Value.ToString());
-            DB.doctors.Add(doctor);
+            Human doctor = new Doctor(StazhDoc.Value.ToString(), EducCB.Text, NameDocTB.Text, AgeDoc.Value.ToString());
+            DB.doctors.Add(doctor as Doctor);
+            Doctor doctor1 = doctor as Doctor;
+            Delegate newdelegate = new Delegate();
+            newdelegate.Displayed(doctor);
             switch (EducCB.Text)
             {
-                case "стоматолог-терапевт": doctor.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); doctor.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
-                case "Стоматолог-хирург": doctor.setThisService = new Rezec("Резекция верхушки корня", 1500, "Резекция"); doctor.setThisService = new UdalZuba("Удаление зуба", 800, "Удаление зуба"); break;
-                case "стоматолог-гигиенист": doctor.setThisService = new Otbel("Механический метод, Фотоотбеливание, Химическое отбеливание, Внутриканальное отбеливание, Лазерное отбеливание", "Отбеливание зубов", "Отбеливание зубов", 9000); doctor.setThisService = new ZubCumIn("Механическая чистка, Пескоструйная обработка, Ультразвуком, Лазером", "Удаление зубного камня", "Удаление зубного камня", 200); break;
+                case "стоматолог-терапевт": doctor1.setThisService = new Lech_Des("Лечение дёсен", 3000, "Лечение дёсен"); doctor1.setThisService = new Lech_Kar("Лечение Кариеса", 3000, "Лечение Кариеса"); break;
+                case "Стоматолог-хирург": doctor1.setThisService = new Rezec("Резекция верхушки корня", 1500, "Резекция"); doctor1.setThisService = new UdalZuba("Удаление зуба", 800, "Удаление зуба"); break;
+                case "стоматолог-гигиенист": doctor1.setThisService = new Otbel("Механический метод, Фотоотбеливание, Химическое отбеливание, Внутриканальное отбеливание, Лазерное отбеливание", "Отбеливание зубов", "Отбеливание зубов", 9000); doctor1.setThisService = new ZubCumIn("Механическая чистка, Пескоструйная обработка, Ультразвуком, Лазером", "Удаление зубного камня", "Удаление зубного камня", 200); break;
             }
+            listBox2.Items.Add(doctor.display());
+            listBox2.Items.Add(newdelegate.Displayed(doctor));
             UpdateGrid();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -276,6 +281,10 @@ namespace OOP_KURS2
             Serialize serialize = new Serialize();
             serialize.Load();
             UpdateGrid();
+        }
+        private void Disp()
+        {
+           
         }
     }
 }

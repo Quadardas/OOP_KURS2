@@ -35,6 +35,11 @@ namespace OOP_KURS2
         {
             set { ThisDoctorServices.Add(value); }
         }
+        public override string display()
+        {
+            string text = $"Врач {thisName} " + base.display();
+            return text;
+        }
     }
 
 }

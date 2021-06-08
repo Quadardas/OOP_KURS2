@@ -32,6 +32,8 @@ namespace OOP_KURS2
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LoadBTN = new System.Windows.Forms.Button();
+            this.SaveBTN = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,9 +76,7 @@ namespace OOP_KURS2
             this.EducCB = new System.Windows.Forms.ComboBox();
             this.NameDocTB = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.eventLog1 = new System.Diagnostics.EventLog();
-            this.SaveBTN = new System.Windows.Forms.Button();
-            this.LoadBTN = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -87,7 +87,6 @@ namespace OOP_KURS2
             ((System.ComponentModel.ISupportInitialize)(this.StazhDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +102,7 @@ namespace OOP_KURS2
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.LoadBTN);
             this.tabPage1.Controls.Add(this.SaveBTN);
             this.tabPage1.Controls.Add(this.label6);
@@ -127,6 +127,26 @@ namespace OOP_KURS2
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Запись Пациента";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // LoadBTN
+            // 
+            this.LoadBTN.Location = new System.Drawing.Point(575, 344);
+            this.LoadBTN.Name = "LoadBTN";
+            this.LoadBTN.Size = new System.Drawing.Size(75, 23);
+            this.LoadBTN.TabIndex = 11;
+            this.LoadBTN.Text = "Загрузить";
+            this.LoadBTN.UseVisualStyleBackColor = true;
+            this.LoadBTN.Click += new System.EventHandler(this.LoadBTN_Click);
+            // 
+            // SaveBTN
+            // 
+            this.SaveBTN.Location = new System.Drawing.Point(494, 344);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(75, 23);
+            this.SaveBTN.TabIndex = 10;
+            this.SaveBTN.Text = "Сохранить";
+            this.SaveBTN.UseVisualStyleBackColor = true;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
             // 
             // label6
             // 
@@ -494,29 +514,13 @@ namespace OOP_KURS2
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // eventLog1
+            // listBox2
             // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
-            // SaveBTN
-            // 
-            this.SaveBTN.Location = new System.Drawing.Point(494, 344);
-            this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(75, 23);
-            this.SaveBTN.TabIndex = 10;
-            this.SaveBTN.Text = "Сохранить";
-            this.SaveBTN.UseVisualStyleBackColor = true;
-            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
-            // 
-            // LoadBTN
-            // 
-            this.LoadBTN.Location = new System.Drawing.Point(575, 344);
-            this.LoadBTN.Name = "LoadBTN";
-            this.LoadBTN.Size = new System.Drawing.Size(75, 23);
-            this.LoadBTN.TabIndex = 11;
-            this.LoadBTN.Text = "Загрузить";
-            this.LoadBTN.UseVisualStyleBackColor = true;
-            this.LoadBTN.Click += new System.EventHandler(this.LoadBTN_Click);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(3, 300);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(259, 69);
+            this.listBox2.TabIndex = 12;
             // 
             // Form1
             // 
@@ -539,7 +543,6 @@ namespace OOP_KURS2
             ((System.ComponentModel.ISupportInitialize)(this.StazhDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AgeDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,9 +593,9 @@ namespace OOP_KURS2
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.Button LoadBTN;
         private System.Windows.Forms.Button SaveBTN;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

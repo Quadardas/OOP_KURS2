@@ -20,10 +20,6 @@ namespace OOP_KURS2
             get { return this.CosmeticType; }
             set { this.CosmeticType = value is string ? value : null; }
         }
-        public new string display()
-        {
-            string text = $"Тип косметологии {this.CosmeticType}";
-            return text;
-        }
+        
     }
 }

@@ -27,6 +27,11 @@ namespace OOP_KURS2
             get { return this.Name; }
             set { this.Name = value is string ? value : null; }
         }
+        public virtual string display()
+        {
+            string text = $"Человек {thisName}(полиморфизм)";
+            return text;
+        }
     }
 
 }

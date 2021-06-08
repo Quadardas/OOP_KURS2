@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Cosmetic.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="Delegate.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
