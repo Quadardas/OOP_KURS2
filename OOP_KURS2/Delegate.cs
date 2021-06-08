@@ -29,14 +29,10 @@ namespace OOP_KURS2
                 disposed = true;
             }
         }
-
         string Out;
-
         Display display;
-
         public void Added()
         {
-
             Out = ("Врач добавлен (демонстрация делегатов)");
         }
         public string Displayed(Object obj)
@@ -47,7 +43,6 @@ namespace OOP_KURS2
                 case "OOP_KURS2.Doctor":
                     display += Added;
                     break;
-
             }
             display();
             return Out;
