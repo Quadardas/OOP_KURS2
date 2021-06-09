@@ -278,6 +278,7 @@ namespace OOP_KURS2
         {
             Serialize serialize = new Serialize();
             serialize.Save();
+            MessageBox.Show("Успешно Сохранено!");
         }
 
         private void LoadBTN_Click(object sender, EventArgs e)
@@ -285,6 +286,7 @@ namespace OOP_KURS2
             Serialize serialize = new Serialize();
             serialize.Load();
             UpdateGrid();
+            MessageBox.Show("Данные успешно загружены!");
         }
         private void Disp()
         {
